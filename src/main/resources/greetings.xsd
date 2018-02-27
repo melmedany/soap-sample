@@ -1,0 +1,51 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://demo/soap/sample/domain" targetNamespace="http://demo/soap/sample/domain"
+	elementFormDefault="qualified">
+
+	<xs:element name="getGreetingRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getGreetingResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="postGreetingRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="postGreetingResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="xs:string" />
+				<xs:element name="time" type="xs:dateTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getAllGreetedUsersRequest">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getAllGreetedUsersResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="users" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
